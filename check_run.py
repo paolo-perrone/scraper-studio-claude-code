@@ -16,7 +16,7 @@ It prints one line per problem, each with what to do next, and exits 1 when any 
 so the same command gates a cron job, a CI step or the instruction you pin for your agent.
 --heal-prompt prints a sentence you can pass to `bdata scraper heal` for the problems it found.
 
-Standard-library Python 3.9+. Read-only. No API key.
+Standard-library Python 3.10+. Read-only. No API key.
 """
 import argparse
 import json

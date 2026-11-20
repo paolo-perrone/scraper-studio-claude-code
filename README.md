@@ -29,7 +29,7 @@ heal prompt:
 
 That's the scraper's real first run: 17 of the 33 products the page shows, because Product Hunt loads the rest as you scroll.
 
-Standard-library Python 3.9+, read-only, no API key.
+Standard-library Python 3.10+, read-only, no API key.
 
 ## The setup, in five commands
 
@@ -64,7 +64,7 @@ Put this in your project's CLAUDE.md, with your ID and your `expect.json`:
   Answer from the file it KEPT. Never fetch or scrape the page yourself.
 ```
 
-Two runs, because one run in this test came back short about 3 times in 10. In headless runs on the test machine, Claude Code didn't load a project CLAUDE.md, so the measured sessions passed the same lines with `claude -p --append-system-prompt-file CLAUDE.md`. Ask your agent to quote its project instructions back if it ignores the pin.
+Two runs, because a single run came back short in 5 of the 16 runs after the scroll fix. In headless runs on the test machine, Claude Code didn't load a project CLAUDE.md, so the measured sessions passed the same lines with `claude -p --append-system-prompt-file CLAUDE.md`. Ask your agent to quote its project instructions back if it ignores the pin.
 
 ## What the runs measured
 
@@ -72,11 +72,11 @@ Fresh Claude Code sessions, each asked for every product on the 2026-11-19 leade
 
 | Session | Time | Steps | Cost | Products |
 |---|---|---|---|---|
-| [A2](sessions/A2.md): no saved scraper | 19 min | 40 | $1.53 | 33, ranks 18 to 33 copied from a third-party site |
+| [A2](sessions/A2.md): no saved scraper | 19 min | 40 | $1.53 | 33, 19 of them copied from a third-party site |
 | [B1](sessions/B1.md): a second fresh session, no scraper reached it | 14.5 min | 46 | $1.40 | ranks 30 to 33 missing |
 | [B3](sessions/B3.md): pinned scraper, one run | 2 min 26 s | 3 | $0.34 | 17 |
 | [B4](sessions/B4.md): pinned scraper, one run | 3 min 17 s | 3 | $0.26 | 17 |
-| B5: pinned scraper, two runs plus `check_run.py` | pending | | | |
+| [B5](sessions/B5.md): pinned scraper, two runs plus `check_run.py` | 6 min 22 s | 13 | $0.67 | 33: kept a 33-row run over a 17-row one |
 
 The scraper itself, every run logged in [runs/](runs/):
 
@@ -87,10 +87,10 @@ The scraper itself, every run logged in [runs/](runs/):
 | heal 1, approve, run | 2 min 14 s to heal | 17 of 33 |
 | heal 2, approve, run | 8 min to heal, 80 s to run | 33 of 33 |
 | 7 runs after heal 2 (CLI, API and inside sessions) | 6 s to 80 s | 33 in 5, 17 in 2 |
-| heal 3, approve, 6 runs | 3 min 17 s to heal | 33 in 4, 17 in 2 |
+| heal 3, approve, 9 runs (6 CLI, 3 inside B5) | 3 min 17 s to heal | 33 in 6, 17 in 3 |
 | API trigger | 25 s | 33 of 33 |
 
-Plain `curl` on the same page: HTTP 403 ([runs/00-plain-fetch.log](runs/00-plain-fetch.log)). The whole test used 8 of the free tier's 5,000 monthly page loads.
+Plain `curl` on the same page: HTTP 403 ([runs/00-plain-fetch.log](runs/00-plain-fetch.log)). The whole test, a first trial on npm included, used 19 of the free tier's 5,000 monthly page loads.
 
 ## Call it from anything
 
