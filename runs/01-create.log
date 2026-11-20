@@ -1,0 +1,26 @@
+start 2026-11-20T18:47:07Z
+npx -p @brightdata/cli bdata scraper create https://www.producthunt.com/leaderboard/daily/2026/11/19 "Daily leaderboard page: for every product launched that day, extract rank, product name, tagline, upvote count, comment count, topics, and the product page URL" --pretty --timing
+Creating scraper template...
+Template created: c_mwpbzgtf7zkgs1xfr
+Triggering AI generation...
+Generating scraper...
+Done in 108 poll attempts.
+{
+  "collector_id": "c_mwpbzgtf7zkgs1xfr",
+  "name": "cli-scraper-1795200429",
+  "status": "done",
+  "completed_steps": [
+    "prepare_intent_analyzer",
+    "planner",
+    "discovery",
+    "collector_mainatiner",
+    "pagination_detector",
+    "code_generator",
+    "input_schema_generator",
+    "preview_runner",
+    "preview_picker"
+  ],
+  "view_url": "https://brightdata.com/cp/scrapers/c_mwpbzgtf7zkgs1xfr",
+  "created_at": "2026-11-20T18:47:09.795Z"
+}
+end 2026-11-20T18:49:14Z

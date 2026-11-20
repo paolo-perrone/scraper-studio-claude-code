@@ -1,0 +1,29 @@
+start 2026-11-20T19:05:40Z
+npx -p @brightdata/cli bdata scraper approve c_mwpbzgtf7zkgs1xfr --url https://www.producthunt.com/leaderboard/daily/2026/11/19 --pretty --timing
+Approving self-healing...
+{
+  "collector_id": "c_mwpbzgtf7zkgs1xfr",
+  "status": "done",
+  "completed_steps": [
+    "planner",
+    "control_preview_runner",
+    "code_fixer",
+    "step_preview_runner",
+    "css_selector_extractor",
+    "code_fixer",
+    "step_preview_runner",
+    "code_fixer",
+    "css_selector_extractor",
+    "step_preview_runner",
+    "css_selector_extractor",
+    "code_fixer",
+    "step_preview_runner",
+    "request_fulfillment_validator",
+    "step_advance",
+    "user_approval"
+  ],
+  "prompt": "",
+  "view_url": "https://brightdata.com/cp/scrapers/c_mwpbzgtf7zkgs1xfr",
+  "next_step": "bdata scraper run c_mwpbzgtf7zkgs1xfr https://www.producthunt.com/leaderboard/daily/2026/11/19"
+}
+end 2026-11-20T19:05:42Z

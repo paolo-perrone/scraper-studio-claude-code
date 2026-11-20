@@ -1,0 +1,3 @@
+2026-11-20T18:47:07Z
+curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" https://www.producthunt.com/leaderboard/daily/2026/11/19
+403

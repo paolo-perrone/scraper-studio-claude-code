@@ -1,0 +1,6 @@
+start 2026-11-20T19:33:19Z
+curl -X POST "https://api.brightdata.com/dca/trigger?collector=c_mwpbzgtf7zkgs1xfr&queue_next=1" -H "Authorization: Bearer $BRIGHTDATA_API_KEY" -H "Content-Type: application/json" -d '[{"url":"https://www.producthunt.com/leaderboard/daily/2026/11/19"}]'
+{"collection_id":"j_mwpdmud924fdroledh","start_eta":"2026-11-20T19:33:20.331Z"}
+poll id=j_mwpdmud924fdroledh
+done after 25s
+end 2026-11-20T19:33:47Z

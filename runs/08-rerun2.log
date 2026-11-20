@@ -1,0 +1,7 @@
+start 2026-11-20T19:05:42Z
+npx -p @brightdata/cli bdata scraper run c_mwpbzgtf7zkgs1xfr https://www.producthunt.com/leaderboard/daily/2026/11/19 --pretty --timing -o 08-rerun2.json
+Triggering scrape...
+Triggered (response_id: d2t1795201543048r2ps3ivoepi)
+Waiting for results...
+Output written to 08-rerun2.json
+end 2026-11-20T19:07:02Z

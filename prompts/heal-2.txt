@@ -1,0 +1,1 @@
+Still only 17 products come back. The leaderboard renders the first 17 products in the initial HTML and loads the rest with infinite scroll: on November 19, 2026 the full list has 33. In the browser step, scroll to the bottom of the page, wait for new products to render, and repeat until the product count stops growing, then parse all of them. Keep the current field types.

@@ -1,0 +1,60 @@
+start 2026-11-20T18:57:31Z
+npx -p @brightdata/cli bdata scraper heal c_mwpbzgtf7zkgs1xfr "Still only 17 products come back. The leaderboard renders the first 17 products in the initial HTML and loads the rest with infinite scroll: on November 19, 2026 the full list has 33. In the browser step, scroll to the bottom of the page, wait for new products to render, and repeat until the product count stops growing, then parse all of them. Keep the current field types." --url https://www.producthunt.com/leaderboard/daily/2026/11/19 --pretty --timing
+Triggering self-healing...
+Healing scraper...
+Done in 415 poll attempts.
+Heal ready — awaiting approval (collector c_mwpbzgtf7zkgs1xfr).
+{
+  "collector_id": "c_mwpbzgtf7zkgs1xfr",
+  "status": "awaiting_approval",
+  "completed_steps": [
+    "planner",
+    "control_preview_runner",
+    "code_fixer",
+    "step_preview_runner",
+    "css_selector_extractor",
+    "code_fixer",
+    "step_preview_runner",
+    "code_fixer",
+    "css_selector_extractor",
+    "step_preview_runner",
+    "css_selector_extractor",
+    "code_fixer",
+    "step_preview_runner",
+    "request_fulfillment_validator",
+    "step_advance"
+  ],
+  "prompt": "Still only 17 products come back. The leaderboard renders the first 17 products in the initial HTML and loads the rest with infinite scroll: on November 19, 2026 the full list has 33. In the browser step, scroll to the bottom of the page, wait for new products to render, and repeat until the product count stops growing, then parse all of them. Keep the current field types.",
+  "view_url": "https://brightdata.com/cp/scrapers/c_mwpbzgtf7zkgs1xfr",
+  "next_step": "bdata scraper approve c_mwpbzgtf7zkgs1xfr --url https://www.producthunt.com/leaderboard/daily/2026/11/19",
+  "preview_result": [
+    {
+      "rank": 1,
+      "product_name": "TestSprite 4.0",
+      "tagline": "Fix one thing, break another? This agent checks it all",
+      "upvote_count": 363,
+      "comment_count": 55,
+      "topics": [
+        "Software Engineering",
+        "Developer Tools",
+        "Artificial Intelligence"
+      ],
+      "product_url": "https://www.producthunt.com/products/testsprite"
+    },
+    {
+      "rank": 2,
+      "product_name": "Verse Engine by Ctruh",
+      "tagline": "Blender, Unity or Unreal to a live 3D link in one click",
+      "upvote_count": 321,
+      "comment_count": 60,
+      "topics": [
+        "Developer Tools",
+        "Augmented Reality",
+        "3D Modeling"
+      ],
+      "product_url": "https://www.producthunt.com/products/verse-engine-by-ctruh"
+    }
+  ],
+  "diff_summary": "proposed template has 1 step(s) — review at view_url"
+}
+end 2026-11-20T19:05:29Z

@@ -1,0 +1,1 @@
+The scraper returns only the first 17 products on the daily leaderboard. The page loads more products as you scroll: on November 19, 2026 it lists 33. Scroll until no new products load and return every product. Also return rank, upvote_count and comment_count as integers, and topics as a JSON array of strings.

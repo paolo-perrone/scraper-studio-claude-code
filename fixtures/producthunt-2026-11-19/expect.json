@@ -1,0 +1,13 @@
+{
+  "min_rows": 33,
+  "sequence": "rank",
+  "fields": {
+    "rank": "int",
+    "product_name": "str",
+    "tagline": "str",
+    "upvote_count": "int",
+    "comment_count": "int",
+    "topics": "list",
+    "product_url": "str"
+  }
+}

@@ -1,0 +1,1 @@
+Daily leaderboard page: for every product launched that day, extract rank, product name, tagline, upvote count, comment count, topics, and the product page URL

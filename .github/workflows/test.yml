@@ -1,0 +1,16 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python test_check_run.py
+      - run: python check_run.py fixtures/producthunt-2026-11-19/3-after-heal-2.json --expect fixtures/producthunt-2026-11-19/expect.json
+      - run: python check_run.py fixtures/producthunt-2026-11-19/4-after-heal-3-short-run.json fixtures/producthunt-2026-11-19/3-after-heal-2.json --expect fixtures/producthunt-2026-11-19/expect.json
