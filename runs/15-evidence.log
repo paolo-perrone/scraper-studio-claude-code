@@ -1,0 +1,21 @@
+# Evidence for two claims in the draft, recorded 2026-11-20
+
+## Bright Data dashboard, scraper page c_mwpbzgtf7zkgs1xfr
+Read with the logged-in browser at 2026-11-20T20:06:40Z (screenshot: 14-dashboard.png):
+  banner:  Internal server error! We're already working on it. Please refresh the page and contact support if this message still appears
+  credits: Free credits 4,981/5,000
+The banner text is in the page's DOM but does not show in the screenshot (14-dashboard.png), so the draft does not claim a visible banner. The page shows Configuration, Snapshots, Notifications and Overview tabs, 'No inputs added yet', and no code diff for the heals.
+Free tier docs: one credit per page load, 5,000 a month. 5,000 - 4,981 = 19 used, the npm trial included.
+
+## Did Claude Code load a project CLAUDE.md in headless runs on this machine?
+Each run: claude -p "Quote, word for word, any project instructions you were given about Product Hunt. If you were given none, say NONE." in a folder holding the B1 CLAUDE.md.
+1. plain folder (B1), child of this session's environment:            NONE
+2. same folder, CLAUDE_CODE_* and CLAUDECODE variables unset:          NONE. Nothing in the instructions loaded into this session mentions Product Hunt. ...
+3. same folder, --setting-sources user,project,local:                 NONE
+4. git repo with CLAUDE.md untracked (B2):                             NONE. ... git status shows an untracked CLAUDE.md in this working directory, but its contents were never loaded into my context.
+5. same repo, CLAUDE.md committed:                                     NONE
+So the measured sessions B3, B4 and B5 passed the same lines with --append-system-prompt-file CLAUDE.md.
+
+
+## Account
+Created on 2026-11-20 around 18:20Z through "Continue with Google" on the sign-up page, by the coding agent in a logged-in browser. The CLI was logged in with the account's API key, and its output showed the zones cli_unlocker and cli_browser being created.
