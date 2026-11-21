@@ -1,0 +1,4 @@
+start 2026-11-20T21:39:44Z
+npx -p @brightdata/cli bdata scraper run c_mwpbzgtf7zkgs1xfr https://www.producthunt.com/leaderboard/daily/2026/11/17 --pretty -o 16-nov17-run2.json
+Output written to 16-nov17-run2.json
+end 2026-11-20T21:39:51Z

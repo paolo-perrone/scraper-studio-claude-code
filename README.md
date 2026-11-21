@@ -89,6 +89,10 @@ The scraper itself, every run logged in [runs/](runs/):
 | 7 runs after heal 2 (CLI, API and inside sessions) | 6 s to 80 s | 33 in 5, 17 in 2 |
 | heal 3, approve, 9 runs (6 CLI, 3 inside B5) | 3 min 17 s to heal | 33 in 6, 17 in 3 |
 | API trigger | 25 s | 33 of 33 |
+| other days, single runs (17 and 18 Nov) | 7 s to 32 s | 34 in 3, 17 in 2 |
+| two 10-input jobs (16 to 19 Nov plus 6 bad inputs) | under 1 min each | 16 to 18 Nov: 34; 19 Nov: 33; 16 Nov had rank 25 twice and no 26; 6 impossible dates: 34 rows each, all ranked 1; 6 dead addresses: no rows |
+
+Auto Self-Healing: turned on from the scraper's Auto Self Healing tab (My Scrapers, More) with Auto save code off; the API's enable call returned HTTP 500 twice ([runs/17-enable-auto-heal.log](runs/17-enable-auto-heal.log)). No healing job confirmed from the two 10-input jobs ([runs/21-autoheal-trigger.log](runs/21-autoheal-trigger.log)).
 
 Plain `curl` on the same page: HTTP 403 ([runs/00-plain-fetch.log](runs/00-plain-fetch.log)). The whole test, a first trial on npm included, used 19 of the free tier's 5,000 monthly page loads.
 
