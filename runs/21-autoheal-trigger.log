@@ -1,0 +1,21 @@
+start 2026-11-21T18:19:16Z
+POST /dca/trigger?collector=c_mwpbzgtf7zkgs1xfr&queue_next=1 with 10 inputs: 2026/11/16 to 2026/11/19, plus 6 dates that do not exist (11/31, 11/32, 2/30, 2/31, 4/31, 6/31)
+{"error":"Collector disabled"}
+HTTP 403
+id=
+end 2026-11-21T18:19:17Z
+2026-11-21T18:19Z: Active scraper switched back on from the scraper page; a 1-input API trigger returned HTTP 200 (j_mwqqg3ehzyvlfgx8c) after an earlier 'Collector disabled' 403
+
+# 10-input run
+start 2026-11-21T18:19:58Z
+{"collection_id":"j_mwqqgdglgrejo8b81","start_eta":"2026-11-21T18:19:59.599Z"}
+HTTP 200
+id=j_mwqqgdglgrejo8b81
+done after 10s
+end 2026-11-21T18:20:09Z
+done at 18:20:29
+
+# 10-input run, 6 addresses that do not exist
+start 2026-11-21T18:20:47Z
+{"collection_id":"j_mwqqhekzaxphf3xdw","start_eta":"2026-11-21T18:20:47.713Z"}
+done 18:21:39

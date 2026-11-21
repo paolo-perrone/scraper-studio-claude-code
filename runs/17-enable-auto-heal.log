@@ -1,0 +1,17 @@
+start 2026-11-20T21:38:49Z
+curl -X POST https://api.brightdata.com/dca/auto_self_healing/create -H "Authorization: Bearer $BRIGHTDATA_API_KEY" -H "Content-Type: application/json" -d '{"collector":"c_mwpbzgtf7zkgs1xfr","enabled":true,"sr_threshold":50,"trigger_frequency":"per_job","min_inputs_threshold":1,"auto_save":false,"cooldown_period":5,"max_jobs_per_day":3,"notification_emails":["<account email>"]}'
+{"validation_errors":["\"min_inputs_threshold\" must be at least 10"]}
+HTTP 400
+end 2026-11-20T21:38:50Z
+
+# retry with min_inputs_threshold 10
+start 2026-11-20T21:39:04Z
+socket hang up
+HTTP 500
+end 2026-11-20T21:39:04Z
+
+# second try after HTTP 500
+start 2026-11-20T21:39:32Z
+connect ECONNREFUSED 172.24.18.59:4000
+HTTP 500
+end 2026-11-20T21:39:32Z
